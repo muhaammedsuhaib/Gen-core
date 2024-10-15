@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; /* Ensures the scrollbar is also rounded horizontally */
+}
+
+/* Scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #1e293b; /* Dark Blue background for the track */
+    border-radius: 12px; /* Round edges */
+}
+
+/* Scrollbar thumb (draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #ffffff; /* White thumb */
+    border-radius: 12px; /* Rounded thumb */
+    border: 3px solid #1e293b; /* Dark Blue border around the thumb for visibility */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Soft inner shadow for depth */
+}
+
+/* Hover effect for scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #2c3e50; /* Dark Blue shade when hovered */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: #ffffff #1e293b; /* Thumb color and Track color: White and Dark Blue */
+}
+
+/* Optional: Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for a modern feel */
+}
